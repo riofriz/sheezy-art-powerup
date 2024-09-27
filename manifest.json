@@ -1,0 +1,42 @@
+{
+    "manifest_version": 3,
+    "name": "Sheezy Power Ups",
+    "version": "1.1",
+    "description": "Display random artworks and automate notifications on Sheezy.art.",
+    "action": {
+      "default_popup": "popup/popup.html",
+      "default_icon": {
+        "16": "images/logo.png",
+        "48": "images/logo.png",
+        "128": "images/logo.png"
+      }
+    },
+    "icons": {
+      "16": "images/logo.png",
+      "48": "images/logo.png",
+      "128": "images/logo.png"
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "permissions": [
+      "activeTab",
+      "alarms",
+      "storage"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["https://sheezy.art/*"],
+        "js": [
+          "scripts/notifications.js", 
+          "scripts/randomArtworks.js",
+          "content.js"
+        ],
+        "run_at": "document_idle"
+      }
+    ],
+    "host_permissions": [
+      "https://sheezy.art/*"
+    ]
+  }
+  
