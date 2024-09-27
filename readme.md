@@ -9,10 +9,19 @@ This extension displays random artworks on the homepage of [Sheezy Art](https://
 
 ## How to Install
 
+### Chromium browsers (e.g. Chrome - Opera - Others)
+
 1. Download the repository as a ZIP file and extract it. (Click on "Code" on the top right of the page)
 2. Open Google Chrome and go to the url `chrome://extensions/`.
 3. Enable "Developer Mode" in the top-right corner.
-4. Click "Load unpacked" and select the folder you extracted.
+4. Click "Load unpacked" and select the folder you just extracted.
+
+### Firefox
+
+1. Go to about:debugging.
+2. Click "This Firefox".
+3. Click on "Load Temporary Add On.."
+4. Navigate to the extracted extension you just downloaded and select `manifest.json`
 
 ## Usage
 
